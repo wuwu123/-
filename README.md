@@ -4,6 +4,10 @@
 ```
 
 ### 日期记录
+### 2017-08-03
+[linux命令](./note/linux命令.md)<br><br>
+[php常用函数](./note/php常用函数.md)<br><br>
+[mysql存储引擎](./note/mysql存储引擎.md)<br><br>
 ### 2017-08-01
 [php生命周期](./note/php生命周期.md)<br><br>
 [2345面试准备](./note/2345面试准备.md)<br><br>
