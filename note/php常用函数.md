@@ -37,6 +37,30 @@ pathinfo("/testweb/test.txt");
     [basename] => test.txt
     [extension] => txt
 ]
+```php
+<?php
+
+function my_scandir($dir)    
+{    
+     $files = array();    
+     if ( $handle = opendir($dir) ) {    
+         while ( ($file = readdir($handle)) !== false ) {    
+             if ( $file != ".." && $file != "." ) {    
+                 if ( is_dir($dir . "/" . $file) ) {    
+                     $files[$file] = my_scandir($dir . "/" . $file);     
+                 }else {    
+                     $files[] = $file;    
+                 }    
+             }    
+         }    
+         closedir($handle);    
+         return $files;    
+     }    
+}  
+
+?>
+
+```
 
 ### php数组
 array()	创建数组。

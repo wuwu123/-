@@ -5,6 +5,7 @@
 
 ### 日期记录
 ### 2017-08-03
+[web安全](./note/web安全.md)
 [linux命令](./note/linux命令.md)<br><br>
 [php常用函数](./note/php常用函数.md)<br><br>
 [mysql存储引擎](./note/mysql存储引擎.md)<br><br>
