@@ -48,6 +48,31 @@ echo date("Y-m-dH:i:s",time()-(3600*24));或echodate("Y-m-d H:i:s",strtotime("-1
 ?>
 ```
 
+### php mysql 操作
+```php
+<?php
+$conn = mysql_connect("localhost", "root", "mckee");
+mysql_select_db("test",$conn);
+mysql_query("set names utf8");
+$sql = "SELECT * FROM category";
+$res = mysql_query($sql);
+while($row = mysql_fetch_assoc($res)){
+    $arr[] = array($row[id],$row[fid],$row[value]);
+}
+getCate(0);
+function getCate($fid = 0) {   
+    global $arr;
+    for ($i = 0; $i < count($arr); $i++) {   
+        if ($arr[$i][1] == $fid) {        
+            echo $arr[$i][2] . "<br>";
+            getCate($arr[$i][0]); //递归
+        }
+    }
+}
+?>
+
+```
+
 ### $GLOBALS和global
 ```
 PHP超全局变量有很多，如下的都属于超全局变量(Superglobal)：
