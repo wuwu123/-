@@ -1,7 +1,10 @@
 ### 抽象类和接口相同点
 1)	都是上层的抽象层。
+
 2)	都不能被实例化
+
 3)	都能包含抽象的方法，这些抽象的方法用于描述类具备的功能，但是不比提供具体的实现。
+
 ### 区别：
 1)	接口里面只能对方法进行声明，抽象类既可以对方法进行声明也可以对方法进行实现；
 在抽象类中可以写非抽象的方法，从而避免在子类中重复书写他们，这样可以提高代码的复用性，这是抽象类的优势；接口中只能有抽象的方法。
@@ -10,15 +13,20 @@ Java语言中类的继承是单继承原因是：
 当子类重写父类方法的时候，或者隐藏父类的成员变量以及静态方法的时候，JVM使用不同的绑定规则。
 如果一个类有多个直接的父类，那么会使绑定规则变得更复杂。为了简化软件的体系结构和绑定机制，java语言禁止多继承。
 
-接口可以多继承，是因为接口中只有抽象方法，没有静态方法和非常量的属性，只有接口的实现类才会重写接口中方法。
+接口可以多继承，是因为接口中只有抽象方法，没有静态方法和非常量的属性，只有接口的实现类才会重写接口
+中方法。
+
 因此一个类有多个接口也不会增加JVM的绑定机制和复杂度。
-对于已经存在的继承树，可以方便的从类中抽象出新的接口，但是从类中抽象出新的抽象类就不那么容易了，因此接口更有利于软件系统的维护和重构。
+
+对于已经存在的继承树，可以方便的从类中抽象出新的接口，但是从类中抽象出新的抽象类就不那么容易了，因
+此接口更有利于软件系统的维护和重构。
 
 ```
 抽象级别（从高到低）：接口>抽象类>实现类。
 ```
 
 ### php文件函数
+```
 fopen() 的第一个参数包含被打开的文件名，第二个参数规定打开文件的模式。
 fclose() 函数用于关闭打开的文件
 fread() 的第一个参数包含待读取文件的文件名，第二个参数规定待读取的最大字节数。
@@ -37,6 +45,7 @@ pathinfo("/testweb/test.txt");
     [basename] => test.txt
     [extension] => txt
 ]
+```
 ```php
 <?php
 
@@ -63,43 +72,39 @@ function my_scandir($dir)
 ```
 
 ### php数组
+```
 array()	创建数组。
 array_change_key_case()	把数组中所有键更改为小写或大写。CASE_LOWER  | CASE_UPPER
 array_chunk()	把一个数组分割为新的数组块。
-```
     $age=array("Bill"=>"60","Steve"=>"56","Mark"=>"31","David"=>"35");
     print_r(array_chunk($age,2,true));
-```
 array_column()	返回输入数组中某个单一列的值。
-```php
-<?php
-$a = array(
-  array(
-    'id' => 5698,
-    'first_name' => 'Bill',
-    'last_name' => 'Gates',
-  ),
-  array(
-    'id' => 4767,
-    'first_name' => 'Steve',
-    'last_name' => 'Jobs',
-  ),
-  array(
-    'id' => 3809,
-    'first_name' => 'Mark',
-    'last_name' => 'Zuckerberg',
-  )
-);
+    $a = array(
+      array(
+        'id' => 5698,
+        'first_name' => 'Bill',
+        'last_name' => 'Gates',
+      ),
+      array(
+        'id' => 4767,
+        'first_name' => 'Steve',
+        'last_name' => 'Jobs',
+      ),
+      array(
+        'id' => 3809,
+        'first_name' => 'Mark',
+        'last_name' => 'Zuckerberg',
+      )
+    );
 
-$last_names = array_column($a, 'last_name');
-print_r($last_names);
-Array
-(
-  [0] => Gates
-  [1] => Jobs
-  [2] => Zuckerberg
-)
-```
+    $last_names = array_column($a, 'last_name');
+    print_r($last_names);
+    Array
+    (
+      [0] => Gates
+      [1] => Jobs
+      [2] => Zuckerberg
+    )
 array_combine()	通过合并两个数组来创建一个新数组。
 array_count_values()	用于统计数组中所有值出现的次数。
 array_diff()	比较数组，返回差集（只比较键值）。
@@ -108,9 +113,7 @@ array_diff_key()	比较数组，返回差集（只比较键名）。
 array_diff_uassoc()	比较数组，返回差集（比较键名和键值，使用用户自定义的键名比较函数）。
 array_diff_ukey()	比较数组，返回差集（只比较键名，使用用户自定义的键名比较函数）。
 array_fill()	用给定的键值填充数组。
-```
-array_fill(3,4,"blue");
-```
+    array_fill(3,4,"blue");
 array_fill_keys()	用指定键名的给定键值填充数组。
 array_filter()	用回调函数过滤数组中的元素。
 array_flip()	交换数组中的键和值。
@@ -177,6 +180,7 @@ sort()	对数组排序。
 uasort()	使用用户自定义的比较函数对数组中的键值进行排序。
 uksort()	使用用户自定义的比较函数对数组中的键名进行排序。
 usort()	使用用户自定义的比较函数对数组进行排序。
+```
 
 ### linux命令
 ##### touch

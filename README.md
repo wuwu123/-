@@ -4,6 +4,8 @@
 ```
 
 ### 日期记录
+### 2017-08-08
+[redis](./note/redis.md)<br><br>
 ### 2017-08-03
 [web安全](./note/web安全.md)
 [linux命令](./note/linux命令.md)<br><br>
