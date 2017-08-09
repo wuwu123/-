@@ -80,6 +80,7 @@ Set集合中不允许出现重复的元素
 ```
 SADD/SMEMBERS/SCARD/SISMEMBER
     SCARD     获取Set集合中元素的数量
+    SISMEMBER 判断f是否已经存在，返回值为0表示不存在
     SMEMBERS  过smembers命令查看插入的结果，从结果可以，输出的顺序和插入顺序无关
 ```
 ### 有序集合  Sorted-Sets
