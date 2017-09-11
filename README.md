@@ -4,7 +4,7 @@
 ```
 
 ### 日期记录
-[最后的冲刺](./php/php面试.md)<br><br>
+[最后的冲刺](./php/面试准备.md)<br><br>
 ### 2017-08-09
 [php面试](./note/php面试.md)<br><br>
 [mysql事务](./note/mysql事务.md)<br><br>
