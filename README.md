@@ -3,6 +3,8 @@
 由于现在懒惰，希望通过每天记录一点点
 ```
 
+### composer 学习
+[composer 自动加载](./new-kn/composer/note/autoload.md)
 
 
 
